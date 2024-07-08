@@ -1,0 +1,28 @@
+1. first install yarn (it is just like npm (manager)) , fast , cuncurrent etcs , it adds all dependency files (like type scripts).
+2. understand each and every file.
+    -> monorepo means ham ek hi repo ke andar apna frontend , backend , libraries rakh sakte haii and usko turbo repo manage krta haii
+    -> in apps ,it setups different projects which are docs and web they have their own package.json
+3. if i write this command #yarn dev , jitne bhi projects honge wo up and running hojaenges.
+4. uske link pe click krke khol liya karo 
+
+making nodejs server
+
+1.uska naam karan karo aur usmein dependency download karo via cli. {yarn workspace server add typescript -D} (ye tarika haii)
+-> har ek alag server (ya app) ka ek workspace hota haii jiska naam inside uske package.json mein hota haii usko use krke kro dependencies install.
+
+2. yarn workspace server add tsc-watch -D (by this tsc dependency i can compile typescript in watch mode)
+
+(typescript is javascript)
+
+3.now we changed start and end in the tsconfig which is created
+4.then add the scipts in package.json (// ye saari commands haii jo run karengi).
+
+5. main jis level pe yarn dev karunga usi level ke aage se applications chalu karega turbo repo 
+
+6. now initialise server and ports (on which the server will start)
+
+7. now inculcate socket.io
+
+8.
+
+
