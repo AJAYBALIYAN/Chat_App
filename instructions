@@ -21,8 +21,33 @@ making nodejs server
 
 6. now initialise server and ports (on which the server will start)
 
-7. now inculcate socket.io
+7. now inculcate socket.io as a service.
 
-8.
+8. now we use that service of socket made by us on our server which we made , and attach this socket service to our http server.
 
 
+
+asli logic
+
+-> we can emit messages (send them to the server)
+-> and all the users who have subscrubed to the message can recieve the message
+
+->socket mein new message aane ke liye new socket connect hone ka system banaya haii aur console karega ki new message recieved (ek socket par ek hi message aa sakta haii ek baari mein). aur isko call krdenge in index.js
+
+-> inko (event listners of socket) server initialize krte samay hi initialise krlo 
+
+-> client idhar aaenege aur ek event initialise karr sakte haii wo which is message
+
+-> now we have created all 3 things server , socket and socket listner
+
+Frontend
+
+->web/app is our front end
+-> we create context for frontend to make our fontend modular
+-> context is a wrapper for similar kind of things 
+-> interface is a structure we have to implement the functions inside them
+
+=> ham apne front end pe ek text grasp karenege via sendmessage field this field will transport our message to socket server
+=> iss kaam ke liye we will be using an library form socket.io
+=> fontend par we use socket.io client and backend par socket.io.
+=> ye saari dependency add karo via yarn , then import then use them okay.
