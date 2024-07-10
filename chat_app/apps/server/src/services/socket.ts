@@ -1,11 +1,20 @@
 import {Server} from 'socket.io'
+import Redis from "ioredis"
+
+// const pub=
+// const sub=
 
 class Socket_service{
     private _io:Server;
 
     constructor(){
         console.log("socket server initialized...")
-        this._io=new Server();
+        this._io=new Server({
+            cors: {
+                allowedHeaders: ['*'],
+                origin: '*'
+            }
+        });
     }
     
     public initListners()
@@ -18,7 +27,8 @@ class Socket_service{
             console.log("new socket connected",socket.id)
 
             socket.on("event:message", async({message}:{message:string}) => {
-                console.log("new message received",message)
+                console.log("new message received -> ",message) // yahan parr aaega message from the front end after emmiting itself. ok .
+                //now i want to publish this message to redis server
             })
         })
     }

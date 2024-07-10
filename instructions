@@ -51,3 +51,29 @@ Frontend
 => iss kaam ke liye we will be using an library form socket.io
 => fontend par we use socket.io client and backend par socket.io.
 => ye saari dependency add karo via yarn , then import then use them okay.
+
+-> web wale package.json mein import karni haii ye library
+-> taaki socket_provider use karr sake iss library ko inside sendmessage funtion to send message to socket server
+-> we imported io form the dependency ab iss io se ham apne server ke saath ek connection bana sakte haii 
+-> we are connecting socket server and frontend by useEffect Hook.
+-> changes in layout (saari app ko socket ka acces de diya haii)
+-> now we try to run this and as we refresh we get some errors due to ki uske uppar cors policy enabled ni haii. 
+-> now we get new socket connected ids print.(servers ke saath ahamara client connection bana raha haii).
+
+-> ab message ko emmit krne ke liye custom hook banate haii socket provider ke andar(BE)
+-> ab frontend ko design karte haii (desging ke liye koi bhi library use karlo) inside (page.tsx)
+
+-> socket.emit ke andar ek event pass hota haii
+-> more to watch video
+
+-> ab ye message sab server tak bhejna haii agar tohh hamko ye msg jo emit karr paa rahe haii ye redis server ko dena hoga 
+
+setting up redis server
+
+-> online free subscribe krlo service ko then backend pe jaise hi koi message aata haii we have to code there only (disable ssl) [it encrypt the in and out data].
+-> for transfer of this message we have to use an library "ioredis"
+-> now we need 2 connections to redis 1-> publishing the message , 2->subscribing the message (pub/sub arch.).
+-> we also need a tool k/a redis insights (for visualising the redis data)
+-> 
+
+
